@@ -49,7 +49,8 @@ const Modal = ({
             <button
               type="submit"
               className="btn btn-primary block btn-wide mx-auto"
-              onClick={() => document.getElementById(modalToClose)?.close()}
+              // @ts-ignore
+              onClick={() => document.getElementById(modalToClose).close()}
             >
               {title}
             </button>
