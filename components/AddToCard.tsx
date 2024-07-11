@@ -41,7 +41,8 @@ const AddToCard: React.FC<AddToCardProps> = ({ course, lessons }) => {
   const [existingCartItems, setExistingCartItems] = useState<OrderItem[]>([]);
   const [existingOrderItems, setExistingOrderItems] = useState<OrderItem[]>([]);
   const [checkedIds, setCheckedIds] = useState<string[]>([]);
-  const userId = session?.user?.id;
+  // @ts-ignore
+  const userId = session?.user.id;
   const router = useRouter();
 
   useEffect(() => {
