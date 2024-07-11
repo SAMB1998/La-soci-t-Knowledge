@@ -3,8 +3,6 @@ import Main from "@/components/Main";
 import Link from "next/link";
 import Image from "next/image";
 import Card from "@/components/Card";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
 
 const page = async () => {
   const courses: any = await fetchCourses();

@@ -11,6 +11,7 @@ export default function SquareProvider({ amount, product }: any) {
   const [paymentStatus, setPaymentStatus] = useState("idle");
   const { data: session } = useSession();
   const router = useRouter();
+  // @ts-ignore
   const userId: any = session?.user.id;
   const simplifiedProduct = product.map((item: any) => ({
     courseId: item.courseId,
@@ -36,7 +37,7 @@ export default function SquareProvider({ amount, product }: any) {
                 amount
               );
               setPaymentStatus(JSON.parse(result));
-              if (paymentStatus.payment.status === "COMPLETED") {
+              if (paymentStatus == "COMPLETED") {
                 router.push("/library");
               }
             }}
